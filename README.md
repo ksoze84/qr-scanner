@@ -1,7 +1,7 @@
 # QR Scanner
 
 Forked from [NIMIQ/QR_SCANNER](https://github.com/nimiq/qr-scanner). 
-Fixed Types. Custom ScanRegion
+Fixed Types. Custom ScanRegion (maxSquare)
 
 Javascript QR Code Scanner based on [Cosmo Wolfe's javascript port](https://github.com/cozmo/jsqr) of [Google's ZXing library](https://github.com/zxing/zxing).
 
