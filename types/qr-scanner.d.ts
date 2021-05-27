@@ -24,9 +24,7 @@ declare class QrScanner {
         canvasSize?: number,
         preferredFacingMode?: 'environment' | 'user',
     );
-    /** @deprecated */
-    constructor(video: HTMLVideoElement, onDecode: (result: string) => void, canvasSize?: number);
-
+ 
     hasFlash(): Promise<boolean>;
     isFlashOn(): boolean;
     toggleFlash(): Promise<void>;

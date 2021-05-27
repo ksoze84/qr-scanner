@@ -302,12 +302,9 @@ export default class QrScanner {
     _calculateScanRegion(video) {
         // Default scan region calculation. Note that this can be overwritten in the constructor.
         const smallestDimension = Math.min(video.videoWidth, video.videoHeight);
-        const scanRegionSize = Math.round(2 / 3 * smallestDimension);
         return {
-            x: (video.videoWidth - scanRegionSize) / 2,
-            y: (video.videoHeight - scanRegionSize) / 2,
-            width: scanRegionSize,
-            height: scanRegionSize,
+            x: Math.round( (video.videoWidth - smallestDimension) / 2),
+            y: Math.round( (video.videoHeight - smallestDimension) / 2),
             downScaledWidth: this._legacyCanvasSize,
             downScaledHeight: this._legacyCanvasSize,
         };
