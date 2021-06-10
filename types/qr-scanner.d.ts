@@ -6,8 +6,11 @@ declare class QrScanner {
     static DEFAULT_CANVAS_SIZE: number;
     static NO_QR_CODE_FOUND: string;
     static WORKER_PATH: string;
+    
 
     static hasCamera(): Promise<boolean>;
+
+    $canvas : HTMLCanvasElement;
 
     constructor(
         video: HTMLVideoElement,
