@@ -305,6 +305,8 @@ export default class QrScanner {
         return {
             x: Math.round( (video.videoWidth - smallestDimension) / 2),
             y: Math.round( (video.videoHeight - smallestDimension) / 2),
+            width: smallestDimension,
+            height: smallestDimension,
             downScaledWidth: this._legacyCanvasSize,
             downScaledHeight: this._legacyCanvasSize,
         };
