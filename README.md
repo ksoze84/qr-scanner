@@ -1,7 +1,7 @@
 # QR Scanner
 
 Forked from [NIMIQ/QR_SCANNER](https://github.com/nimiq/qr-scanner). 
-Fixed Types. Custom ScanRegion (maxSquare). Adds interval for scan.
+Fixed Types. Custom ScanRegion (maxSquare). Adds interval for scan (recomended 15ms for 60fps and 30ms for 30fps).
 
 See options in the constructor:
 
