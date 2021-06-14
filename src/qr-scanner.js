@@ -15,7 +15,8 @@ export default class QrScanner {
         onDecode,
         canvasSizeOrOnDecodeError = this._onDecodeError,
         canvasSizeOrCalculateScanRegion = this._calculateScanRegion,
-        preferredFacingMode = 'environment'
+        preferredFacingMode = 'environment',
+        interval
     ) {
         this.$video = video;
         this.$canvas = document.createElement('canvas');
@@ -25,6 +26,7 @@ export default class QrScanner {
         this._active = false;
         this._paused = false;
         this._flashOn = false;
+        this._interval = interval || 0;
 
         if (typeof canvasSizeOrOnDecodeError === 'number') {
             // legacy function signature where the third argument is the canvas size
@@ -335,7 +337,7 @@ export default class QrScanner {
                     }
                     this._onDecodeError(error);
                 })
-                .then(() => this._scanFrame());
+                .then( () => setTimeout( this._scanFrame, this._interval ) );
         });
     }
 

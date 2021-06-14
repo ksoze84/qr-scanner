@@ -1,7 +1,21 @@
 # QR Scanner
 
 Forked from [NIMIQ/QR_SCANNER](https://github.com/nimiq/qr-scanner). 
-Fixed Types. Custom ScanRegion (maxSquare)
+Fixed Types. Custom ScanRegion (maxSquare). Adds interval for scan.
+
+See options in the constructor:
+
+```html
+new QrScanner(
+        video: HTMLVideoElement,
+        onDecode: (result: string) => void,
+        onDecodeError?: (error: string) => void,
+        calculateScanRegion?: (video: HTMLVideoElement) => QrScanner.ScanRegion,
+        preferredFacingMode?: 'environment' | 'user',
+        interval: number
+    );
+```
+
 
 Javascript QR Code Scanner based on [Cosmo Wolfe's javascript port](https://github.com/cozmo/jsqr) of [Google's ZXing library](https://github.com/zxing/zxing).
 
