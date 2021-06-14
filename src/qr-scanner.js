@@ -337,7 +337,7 @@ export default class QrScanner {
                     }
                     this._onDecodeError(error);
                 })
-                .then( () => this._interval? setTimeout( this._scanFrame, this._interval ) : this._scanFrame() );
+                .then( () => this._interval? setTimeout( () => this._scanFrame(), this._interval ) : this._scanFrame() );
         });
     }
 
