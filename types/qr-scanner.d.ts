@@ -18,7 +18,7 @@ declare class QrScanner {
         onDecodeError?: (error: string) => void,
         calculateScanRegion?: (video: HTMLVideoElement) => QrScanner.ScanRegion,
         preferredFacingMode?: 'environment' | 'user',
-        interval: number
+        interval?: number
     );
     /** @deprecated */
     constructor(
